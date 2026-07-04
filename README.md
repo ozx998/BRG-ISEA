@@ -1,2 +1,2 @@
-# ISEALabs
+# BRG-ISEA
 Lab documentation
