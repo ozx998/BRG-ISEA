@@ -81,3 +81,23 @@ Total cost: 408+1688.44+3120+23668 = $28884.44
 
 [Printer Paper](https://popular.com.sg/collections/paperone-copier-paper/products/paperone-premium-paper-a4-100g-500-s-1)
 
+### 2a-1 Reflection Questions
+Based on the TCO, which printer is the most cost-effective over 5 years?
+The Canon PIXMA TS3470 is more cost-effective, at $26,987.65 versus the Brother's $28,884.44, due to the laser's much higher electricity usage.
+
+Would the answer change for a home user who prints only 5 pages per week?
+Yes. At low volumes, ink and paper costs shrinks a lot, so the canon will be better as its cheaper
+
+What other non-financial factors could influence printer selection? 
+Warranty - The Brother offers a 3-year on-site warranty, providing better long-term support and reducing downtime risk compared to the Canon.
+Amount of time in standby mode - Both printer draw electricity in standby mode but canon draws less as brother printer(laser) requires more power.
+Speed - The Brother prints 26ppm with auto-duplex, far faster than the Canon's 7.7ppm, benefiting high-volume or time-sensitive tasks.
+Reliability - Laser printers handle humidity better and avoid ink-clogging issues, making the Brother more dependable for occasional or heavy use.
+
+What cost components are more significant for a large workgroup printer? 
+The main costs come down to toner and electricity, as high-volume printing uses up consumables fast and constant operation makes power a real expense over time.
+
+At what point (in years/pages) do the two printer options break even in cost?
+They will not break even. The Canon stays cheaper throughout, as the laser's higher electricity cost outweighs its lower purchase price.
+
+## 2b-1 Cloud Web Server Deployment
