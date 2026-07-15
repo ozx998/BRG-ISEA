@@ -102,21 +102,28 @@ They will not break even. The Canon stays cheaper throughout, as the laser's hig
 
 ## 2b-1 Cloud Web Server Deployment
 ### EC2 Instance Launched
+<img width="890" height="881" alt="2b ec2" src="https://github.com/user-attachments/assets/925369d0-d460-4ad6-8d81-7beefb8bf6bf" />
 
 ### Security Group Configured
+<img width="1571" height="631" alt="2b security" src="https://github.com/user-attachments/assets/5af45621-f470-4b62-8511-5495fde5da21" />
 
 ### SSH Access Successful
+<img width="1246" height="448" alt="2b-1 ssh" src="https://github.com/user-attachments/assets/cc345dba-1fc8-488d-929f-6adf7882cdd6" />
 
 ### Apache Installed and Tested
 ```bash
 sudo apt install apache2
 ```
+<img width="601" height="94" alt="2b installed" src="https://github.com/user-attachments/assets/3020b9ff-d36c-4359-8fec-63e1c9067398" />
 
 ### Custom index.html
 ```bash
 sudo nano /var/www/html/index.html
 cat /var/www/html/index.html
 ```
+<img width="891" height="84" alt="2b cat" src="https://github.com/user-attachments/assets/82a5efa9-b967-48f9-a5ed-63f60b532716" />
+<img width="890" height="875" alt="2b custom" src="https://github.com/user-attachments/assets/299b4f64-857e-4b52-9244-b33e946f05bb" />
+<img width="892" height="878" alt="2b apache" src="https://github.com/user-attachments/assets/d5491ab4-fe86-47a0-9ffc-b870ca9cf571" />
 
 ### External File Downloaded with wget
 ```bash
@@ -125,6 +132,8 @@ pwd
 wget http://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf
 ls -lh EECS-2009-28.pdf
 ```
+<img width="891" height="484" alt="2b exdown" src="https://github.com/user-attachments/assets/b48cbe55-a651-49e9-880e-c25b9c737030" />
+
 ### Copying of file to web root
 ```bash
 cd /home/ubuntu
@@ -132,7 +141,9 @@ sudo cp EECS-2009-28.pdf var/www/html
 ls -l /var/www/html
 ```
 
+
 ### PDF File Accesible via browser
+
 
 ### Link Inserted in HTML Page
 ```bash
