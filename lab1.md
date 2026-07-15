@@ -54,8 +54,8 @@ Ubuntu desktop applications such as firefox, File manager, terminal and appstore
 <img width="1712" height="950" alt="1a-libre" src="https://github.com/user-attachments/assets/4d76e9ef-dc81-4088-8be3-043468231127" />
 <img width="753" height="938" alt="1a-2 gui fam" src="https://github.com/user-attachments/assets/5d21ed12-b05b-46a8-b95c-38326828cd73" />
 
-### Terminal Commands
-These are the commands that I used to explore the Linux environment
+### Terminal Commands<img width="886" height="489" alt="1a lookup" src="https://github.com/user-attachments/assets/fe58747a-9bd5-4449-9122-b64e69b1d40d" />
+
 
 ```bash
 ps -e
@@ -81,8 +81,6 @@ less
 
 
 ### System information Commands
-
-I explored system information using the terminal commands:
 uname -a
 lsb_relaese -a
 hostnamectl
@@ -92,7 +90,6 @@ hostnamectl
 <img width="691" height="513" alt="1a uname" src="https://github.com/user-attachments/assets/76758c80-c0a4-48ab-b26d-a3ab5c435bdd" />
 
 ###User Privilege Experiment
-commands used:
 whoami
 sudo whoami
 adduser test
@@ -100,20 +97,18 @@ sudo adduser test
 <img width="691" height="372" alt="1a whoami" src="https://github.com/user-attachments/assets/9e7155ea-1db6-4101-92b5-fb6179c45715" />
 
 ### Networking Tests
-Here I will try to ip an output and ping to ip 8.8.8.8
-commands used:
 ```bash
 ip a
 ping 8.8.8.8
 ```
+<img width="695" height="737" alt="1a ip a" src="https://github.com/user-attachments/assets/5eed2323-bef3-4a4c-9fd7-e68e2cb84a15" />
 
 ### Edit host file name and ping GoogleEpicDNS
-Here I will edit the hosts file and create a custom name, and also try and ping GoogleEpic DNS
-The commands I used are 
 ```bash
 sudo nano /etc/hosts editing
 ping GoogleEpicDNS
 ```
+<img width="893" height="875" alt="1a sudo nano" src="https://github.com/user-attachments/assets/466b91bf-b252-4e1b-bbc6-18a815b145da" />
 
 ### DNS Lookup
 commands used:
@@ -122,14 +117,8 @@ nslookup google.com
 sudo apt install whois
 whois google.com
 ```
-
-### Public vs Private IP Reflection
-Here I find my ip using https://whatismyipaddress.com and I noticed that it is different.
-The IP address shown by ip a is the private IP address assigned to Ubuntu inside the network. While the IP address shown by whatismyipaddress.com is the public IP address which is seen by the websites and is provided by the router.
-The commands I used are 
-```bash
-ip a
-```
+<img width="891" height="807" alt="1a whois" src="https://github.com/user-attachments/assets/77c3a47d-4927-4764-a348-f2099509b9c2" />
+![Uploading 1a lookup.png…]()
 
 ### Hardware Info Commands
 Here I will show the difference between the terminal hardware info and the GUI hardware info
@@ -139,16 +128,24 @@ lsusb
 lspci
 less /proc/cpuinfo
 ```
+<img width="890" height="740" alt="1a proccpu" src="https://github.com/user-attachments/assets/7bd3cc85-e2f1-4124-858e-0dcbdefc9599" />
+<img width="892" height="694" alt="1a lsusb" src="https://github.com/user-attachments/assets/50d069ec-db44-422d-90e6-dbfbb46b3abd" />
+<img width="892" height="851" alt="1a less bus" src="https://github.com/user-attachments/assets/e3ca85e1-d4b9-4857-a3e4-c1a836900b89" />
+<img width="850" height="635" alt="1a command output" src="https://github.com/user-attachments/assets/07b9e1cd-e407-4210-9b88-d39a0229e75c" />
+
 
 ### Software Installed
-Here I will demonstrate the 3 ways of using softwares in Ubuntu. Through the browser, through binary download, and through a repository install
+3 ways of using softwares in Ubuntu. Through the browser, through binary download, and through a repository install
 The commands I used are
 ```bash
 ls -lah
 ```
+<img width="1712" height="950" alt="1a-libre" src="https://github.com/user-attachments/assets/7b25e947-33c8-4c72-b557-3be2e98aea18" />
+<img width="361" height="65" alt="1a download" src="https://github.com/user-attachments/assets/c7eb263c-4ad5-4cb8-a95f-e9ae6fd43d30" />
+<img width="953" height="884" alt="1a app" src="https://github.com/user-attachments/assets/b075c02a-41bd-47c8-a511-27f44b1a2055" />
+
 ### Command Line Install via Apt
-Here I will use APT to update package lists. When I tried to run less /etc/apt/sources.list, the system prompted me that since my Ubuntu is a newer version, it has been moved to /etc/apt/sources.list.d/ubuntu.sources
-The commands I used are
+The commands used:
 ```bash
 sudo apt update
 sudo apt upgrade
@@ -156,10 +153,13 @@ sudo apt install vlc
 vlc --version
 less /etc/apt/sources.list.d/ubuntu.sources
 ```
+<img width="805" height="386" alt="1a vlcver" src="https://github.com/user-attachments/assets/a8474c40-a412-40ff-af10-91e2b45c8227" />
+<img width="892" height="877" alt="1a ubuntusrc" src="https://github.com/user-attachments/assets/9d47e22c-9f9e-40d7-946a-223a9eb590f5" />
+<img width="889" height="626" alt="1a update" src="https://github.com/user-attachments/assets/ebfaa7a7-93f6-46dd-8442-f3129254b650" />
+<img width="890" height="751" alt="1a installup" src="https://github.com/user-attachments/assets/b8d81f41-ffc9-4152-88e1-0bda38b235c4" />
+
 ### Source Code Compilation
-Here I will file hello_world.c with source code, compile it using gcc, and execute it. 
-When I tried to compile it using gcc, the system prompted me that I do not have gcc installed. Thus, i used sudo apt install gcc
-The commands I used are
+The commands used:
 ```bash
 nano hello_world.c
 sudo apt install gcc
@@ -167,14 +167,400 @@ gcc hello_world.c -o hello_world_executable
 ls -lah
 ./hello_world_executable
 ```
+<img width="890" height="346" alt="1a gcc" src="https://github.com/user-attachments/assets/709e4486-a82f-4577-96c1-c7486627a71f" />
+<img width="890" height="682" alt="1a helloexe" src="https://github.com/user-attachments/assets/fbaa312a-835a-4777-a3a3-05b1ad206c19" />
+<img width="891" height="835" alt="1a hello" src="https://github.com/user-attachments/assets/21e6827f-41c5-4f25-bd5d-8650d52a9a9b" />
 
-### Reflection Summary
 
-### 1a-2 Reflection Questions
+### Reflection Summary 1a-2
+
 Which file editors are best for remote access and why?
+Nano file editor is better for remote access as it is a terminal editor.
 
 Compare Software Installation Methods: Saas vs binaries vs repos vs source
+Saas: does not need to be installed e.g Google Docs
+Binaries: Pre-compiled files to download and run directly. Fast and simple, but need to manage updates and dependencies manually. 
+Package Repositories: Software installed via a package manager that automatically handles dependencies and updates. e.g. apt install
+Source Code: Raw code compiled manually and offers maximum control and customization, but is time-consuming, with dependencies, builds, and updates all needing manual handling.
 
 what are the pros/cons of each method from user and developer perspectives
+SaaS: The simplest option since no download is required, though functionality can sometimes be limited compared to other methods.
+Binaries: A middle-ground option offering full functionality, but security can be a concern since not all downloads come from trustworthy sources.
+Repositories: The easiest way to get full functionality, though updates may lag behind what's available directly from the source.
+Source: The most demanding option, as it requires programming knowledge to build and install successfully.
 
 How did using CLI improve your understanding of Linux
+Using the CLI deepened my understanding by forcing me to know exactly what each command does, rather than relying on GUI shortcuts.
+
+## 1b-1 Linux Services, SSH, Firewalls & Compression
+### Apache Web Server Installed
+The commands I used:
+```bash
+sudo apt install apache2
+```
+<img width="862" height="113" alt="1b apachedown" src="https://github.com/user-attachments/assets/6622c78d-4f59-4874-9dea-12fd75e5afb0" />
+
+
+### Modified index.html page
+Here I will modify Apache's default page to make it my own. I first tried nano /var/www/html/index.html since nano is to edit, but I could not save the file as i did not have permission. Hence, I had to use sudo nano to edit the file instead.
+The commands I used are
+```bash
+sudo nano /var/www/html/index.html
+```
+<img width="891" height="842" alt="1b apacherewrite" src="https://github.com/user-attachments/assets/b950c800-940f-4a5f-81fb-8ebb69b4a392" />
+
+### IP Address Identified and Shared
+Here I will show my local IP and loopback IP and that I can access my partner's IP. For this excercise, I used my host OS to demonstrate.
+<img width="895" height="647" alt="1b apacheweb" src="https://github.com/user-attachments/assets/28d99ff7-5c81-4854-9f38-2468c867238a" />
+This shows my both my vm's loopback IP labelled lo and my local IP. 
+<img width="821" height="454" alt="1b whatsmyip" src="https://github.com/user-attachments/assets/e62dd6f4-21a9-460b-9fbe-6b697051fbbd" />
+
+
+### Nmap Port Scan Result
+<img width="784" height="286" alt="1b zenmap" src="https://github.com/user-attachments/assets/c11bd749-6cc3-4f2b-b854-33a0d6645957" />
+
+
+### Firewall (UFW) Status and Rules
+Here I will show you the status before and after enabling firewall, and show youthat port 80 is allowed and verified. I also had to reinstall apache as the previous excercise asked us to remove apache.
+The commands I used are
+```bash
+sudo ufw status verbose
+sudo ufw allow "Apache"
+sudo apt install apache2
+```
+<img width="639" height="294" alt="1b status" src="https://github.com/user-attachments/assets/4e7aa68e-ac7e-4b63-bc04-9e599e6e6a24" />
+
+### New User Created and Verified
+Here I will add a user and verify it with /etc/passwd
+The commands I used are
+```bash
+sudo adduser testuser
+cat /etc/passwd
+```
+<img width="682" height="198" alt="1b-f" src="https://github.com/user-attachments/assets/c123c959-3899-40da-bfc1-87e2622d8388" />
+
+<img width="689" height="354" alt="1b-d" src="https://github.com/user-attachments/assets/9b4d30c3-e996-499f-8010-5075cbdfcdc3" />
+
+### Compression and Decompression Tested
+Here I will compress and decompress files using terminal codes and show the output using ls -la. when using bzip the system prompted me to install, so I used sudo apt install bzip2.
+The commands I used are
+```bash
+ls -la
+sudo apt install bzip2
+bzip2 tar.bz2
+bunzip2 tar.bz2
+tar -xvf Gutenberg.tar
+grep -n "best of times" twocities.txt
+```
+<img width="752" height="694" alt="1b-g" src="https://github.com/user-attachments/assets/221e77ee-bf61-4657-a74a-2aa7c85ce252" />
+
+### SCP File Transfers Between Machines
+Here I will copy a file from host machine to vmmachien through ssh
+The commands I used are
+```bash
+echo "1b test" > test.txt
+scp test.txt zxong@192.168.134.128:/home/zxong
+ls -la
+```
+<img width="957" height="229" alt="1b scp" src="https://github.com/user-attachments/assets/1095b8e9-7bf0-4de9-a41c-7bdf506ca0c1" />
+
+<img width="690" height="250" alt="1b testtxt" src="https://github.com/user-attachments/assets/8d986ef7-0287-4a9a-b0bb-26d7606125c5" />
+
+### Extension Challenge 1 Completed
+Here I will SSH into my vm and create a file on its desktop from my host machine
+The commands I used are
+```bash
+cd ~/Desktop
+touch zxong
+ls -la Desktop
+```
+<img width="815" height="691" alt="1b extension" src="https://github.com/user-attachments/assets/4f260403-d9e4-4f9b-8942-a5e650412f63" />
+
+### Extension Challenge 2 Completed
+Here I will attempt to launch gedit over SSH. I am unable to launch gedit over SSH as is a GUI text editor and SSH only allows for command line access. 
+The commands I used are
+```bash
+ssh zxong@192.168.134.128
+gedit
+```
+<img width="820" height="691" alt="1b gedit" src="https://github.com/user-attachments/assets/f9ee8001-a4cd-4aa0-9047-c43d600de2f2" />
+
+### Extension Challenge 3 Completed
+Here i will create new files and attempt to transfer them from my host machine to my vm
+The commands I used are
+```bash
+echo "test test" > test1
+echo "test test" > test2
+scp test.txt test1.txt test2.txt zxong@192.168.134.128
+ls -la
+```
+<img width="690" height="250" alt="1b testtxt" src="https://github.com/user-attachments/assets/878c39cd-e506-4856-b046-a7a048a861ee" />
+<img width="957" height="229" alt="1b scp" src="https://github.com/user-attachments/assets/8335ec19-8d2f-4c03-ab98-22f7c663298d" />
+
+### Extension Challenge 4 Completed
+Here I will download the top 10 books from Gutenberg, compress them using tar and bzip2, then transfer them to my host machine from vm via scp
+The commands I used are
+```bash
+mkdir gutenberg_top10
+cd gutenberg_top10
+wget https://www.gutenberg.org/files/2701/2701-0.txt -O 01_moby_dick.txt
+wget https://www.gutenberg.org/files/1342/1342-0.txt -O 02_pride_and_prejudice.txt
+wget https://www.gutenberg.org/files/27509/27509-0.txt -O 03_2006_cia_world_factbook.txt
+wget https://www.gutenberg.org/files/1513/1513-0.txt -O 04_romeo_and_juliet.txt
+wget https://www.gutenberg.org/files/42486/42486-0.txt -O 05_two_magics.txt
+wget https://www.gutenberg.org/files/2641/2641-0.txt -O 06_room_with_a_view.txt
+wget https://www.gutenberg.org/files/27558/27558-0.txt -O 07_2003_cia_world_factbook.txt
+wget https://www.gutenberg.org/files/2554/2554-0.txt -O 08_crime_and_punishment.txt
+wget https://www.gutenberg.org/files/65662/65662-0.txt -O 09_der_zauberberg_zweiter_band.txt
+wget https://www.gutenberg.org/files/67979/67979-0.txt -O 10_blue_castle.txt
+ls -la
+tar cf gutenbergtop10.tar gutenbergtop10
+bzip2 gutenbergtop10.tar
+scp zxong@192.168.134.128:/home/zxong/gutenbergtop10.tar.bz2 Desktop
+```
+<img width="575" height="59" alt="1b cd" src="https://github.com/user-attachments/assets/16e16c7f-a29a-477c-8ac0-5bf9c9b0382a" />
+<img width="467" height="39" alt="1b bzipp" src="https://github.com/user-attachments/assets/e172308a-f861-4b06-aad3-a473e87d0606" />
+<img width="930" height="292" alt="1b gutDownload" src="https://github.com/user-attachments/assets/e2693cdc-a856-4af7-92e9-dffc4fdf1412" />
+<img width="814" height="500" alt="1b wget" src="https://github.com/user-attachments/assets/8c0208d2-756b-4670-9de5-0021799901c0" />
+
+### Two VMs Networked
+Here I will attempt to ping my host machine and my ubuntu to each other
+The commands I used are 
+```bash
+ping 192.168.134.128
+ipconfig
+ping 192.168.18.67
+```
+<img width="694" height="180" alt="1b ubuping" src="https://github.com/user-attachments/assets/77d7dbbd-8fd2-4ef6-a68c-cb96e5e87b4c" />
+<img width="1118" height="620" alt="1b pcping" src="https://github.com/user-attachments/assets/585d8735-dcdb-4c26-ae30-1171213e4e07" />
+
+### Reflection Paragraph
+Working with Linux networking gave me a much deeper, hands-on understanding of how machines actually communicate with each other, rather than just reading about it. Setting up SSH access let me control my VM remotely and made me realise how much server administration relies on the command line rather than a GUI. Using SCP to transfer files between my host machine and VM helped me understand how data moves securely between systems, and troubleshooting connection errors along the way taught me to think carefully about file paths, hostnames, and which machine I was actually issuing commands from.
+
+### 1b-1 Reflection Questions
+
+Whats the role of a firewall in managing services?
+A firewall controls which ports/services are reachable from outside, blocking unwanted traffic while allowing legitimate access
+How did SSH access deepen your understanding of Linux as a server?
+SSH showed me that servers are managed entirely through commands, reinforcing that GUI tools aren't available or necessary for remote administration
+Why is file compression important in server contexts?
+Compression reduces storage space and transfer time, making backups, downloads, and file transfers between machines faster and more efficient.
+How does user privilege management help secure system?
+Limiting user privileges restricts what each account can access or modify, reducing damage potential if credentials are compromised or misused.
+
+## 1b-2 Linux File Permissions & Gropu Access Control
+
+### Three Users Created
+Here i will create three new users using adduser
+The commands I used are
+```bash
+sudo adduser alice
+sudo adduser joe
+sudo adduser dude
+cat /etc/passwd
+```
+<img width="834" height="598" alt="1b adduser" src="https://github.com/user-attachments/assets/17198288-8727-444a-9af7-509aa1abf6cc" />
+<img width="771" height="628" alt="1b passwd" src="https://github.com/user-attachments/assets/dda96afc-dace-4e7c-925d-c057d0ce262d" />
+
+### Group Created and Configured
+Here I will create a group with alice and joe via adduser [user][group]
+The commands I used are
+```bash
+sudo groupadd sharedgroup
+sudo adduser alice sharedgroup
+sudo adduser joe sharedgroup
+less /etc/group
+```
+<img width="668" height="94" alt="1b grp" src="https://github.com/user-attachments/assets/14a43721-e104-4a03-a6b8-ca2be0573321" />
+<img width="468" height="300" alt="1b shrdgrp" src="https://github.com/user-attachments/assets/937bc1f2-b5fd-472a-8b3f-b677b04b2e08" />
+
+
+### 'Shared' Directory Created in /home/
+Here I will output mkdir /home/shared and update ownership and group via chown, chgrp
+The commands I used are
+```bash
+sudo mkdir /home/shared
+sudo chown alice /home/shared
+sudo chgrp sharedgroup /home/shared
+ls -ld /home/shared
+```
+
+### Ten Files Created in 'shared' Folder
+Here I will create 10 files inside the "shared" folder
+The commands I used are
+```bash
+sud touch /home/shared file1.txt
+sud touch /home/shared file2.txt
+sud touch /home/shared file3.txt
+sud touch /home/shared file4.txt
+sud touch /home/shared file5.txt
+sud touch /home/shared file6.txt
+sud touch /home/shared file7.txt
+sud touch /home/shared file8.txt
+sud touch /home/shared file9.txt
+sud touch /home/shared file10.txt
+ls -l /home/shared
+```
+
+### Permissions Assigned Properly
+Here I will give permission to alice and joe in the shared group
+The commands I used are
+```bash
+sudo chown alice:sharedgroup /home/shared/file*txt
+sudo chmod 750 /home/shared/file*txt
+ls -l /home/shared
+```
+
+### Access Verified as Each User
+Here I will check the permissions of the users
+The commands I used are
+```bash
+su - alice
+su - joe
+su - dude
+whoami
+ls -l /home/shared
+echo "test" >> /home/shared/file1.txt
+echo "test" >> /home/shared/file2.txt
+cat /home/shared/file1.txt
+```
+
+### Use of chmod/chown/chgrp -R
+Here I will show the usage of recursive flags
+The commands I used are
+```bash
+sudo chown -R alice /home/shared
+sudo chgrp -R sharedgroup /home/shared
+sudo chmod -R 750 /home/shaared
+sudo ls -ld /home/shared
+sudo ls -l /home/shared
+```
+
+### Add Dude to Sudo
+Here I will add dude to sudo group
+The commands I used are
+```bash
+sudo addusers dude sudo
+groups dude
+```
+
+### Dude Sudo Access
+Here I will use dude's new sudo permission to access protected files
+The commands I used are
+```bash
+su - dude
+ls -l /home/shared
+sudo ls -l /home/shared
+```
+
+### Clean Up Folder
+Here I will delete the shared directory and its contents
+The commands I used are
+```bash
+sudo rm -r /home/shared
+sudo ls -ld /home/shared
+```
+
+### 1b-2 Reflection Questions
+How do Linux permissions differ from Windows ACL? 
+
+Whats the effect of chmod 770 vs 750?
+
+What is the risk of adding users to the sudo group?
+
+Why is it important to verify with 'su' and 'whoami'?
+
+
+## 1b-3 File Search, Analysis & Archiving in Linux
+### Archieve Extraction
+Here I will extract the archieved guntenberg.tar.bz2. I had to transfer the file from my host machine to VM
+The commands I used are
+```bash
+scp 1b-3-Gutenberg.tar.bz2 jaden@192.168.138.128L /home/jaden/
+ls -l 1b-3-Gutenberg.tar.bz2
+bunzip2 1b-3-Gutenberg.tar.bz2
+tar -xvf 1b-3-Gutenberg.tar
+ls -l
+```
+
+### File Listing of Extracted Directory
+Here I will show you the output of ls -l where Gutenberg was extracted to. 
+The commands I used are
+```bash
+ls -l
+```
+
+### Filename Search
+Here I will demonstrate filename search
+The commands I used are
+```bash
+find ./Gutenberg -name "*.txt"
+```
+
+### Text Seach via Grep
+Here I will demonstrate a text search using grep
+The commands I used are 
+```bash
+ls -l
+grep -r "verdigris"
+```
+
+### Contextual Text Search
+Here I will demonstrate a contextual text search using grep. There was no phrase matching "Next day there was a surprise for Jack". Thus, there was no output given
+The commands I used are
+```bash
+grep -r -C 3 "Next day there was a surprise for Jack"
+```
+
+### Data Based File Search
+Here I will demonstrate data based file search using find. find . -type f -printf '%T+ %p\n' lists the files, sort sorts the results with oldest being first and sed -n '3p' prints only the 3rd line 
+The command I used are
+```bash
+find . -type f -printf '%T+ %p\n' | sort | sed -n '3p'
+```
+
+### Size Based File Search
+Here I will demonstrate a file search based on size. soze 255258c has no files, thus, there is no output
+The commands I used are
+```bash
+find . -type f -size 255258c -exec ls -lh {} \;
+find . -type f -size +512k -exec ls -lh {} \;
+```
+
+### Find Largest File
+Here I will demonstrate the Largest File found
+The command line I used are 
+```bash
+du -a ./Gutenberg | sort -nr | head
+```
+
+### Text Frequency Analysis Performed
+Here I will demonstrate text frequency analysis
+The command i used are
+```bash
+sed -e 's/\s/\n/g' < test.txt | sort | uniq -c | sort -nr | head -200
+```
+
+### Answers to Questions Provided
+How many times does the string “verdigris” appear? (enter a number only) 
+1
+What is the surname of the author of the filename “1107.txt”? (case sensitive) 
+NIL
+What is the surname of the author of the file that is exactly 255258 bytes? (case sensitive) 
+NIL
+What is the filename of the file with the 3rd oldest creation date? 
+frankenstein.txt
+Find the word that follows the text: “Next day there was a surprise for Jack” (Case-sensitive, no spaces) 
+NIL
+
+### 1b-3 Reflection Questions
+Which command-line tool was the most useful in solving the questions?  
+
+How might these search tools help in cybersecurity investigations? 
+
+
+How could scripting improve repetitive search tasks? 
+
+What limitations did you encounter using grep and find? 
+
+ 
