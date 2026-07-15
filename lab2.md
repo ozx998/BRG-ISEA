@@ -137,12 +137,14 @@ ls -lh EECS-2009-28.pdf
 ### Copying of file to web root
 ```bash
 cd /home/ubuntu
-sudo cp EECS-2009-28.pdf var/www/html
+sudo cp EECS-2009-28.pdf /var/www/html
 ls -l /var/www/html
 ```
+<img width="889" height="121" alt="2b copyfile" src="https://github.com/user-attachments/assets/616c3927-39e0-4bb4-a1f6-35bb197bdcf8" />
 
 
 ### PDF File Accesible via browser
+<img width="951" height="938" alt="2b pdf" src="https://github.com/user-attachments/assets/aa189634-fe57-4ee4-9d0d-5fcca3d81d55" />
 
 
 ### Link Inserted in HTML Page
@@ -150,9 +152,14 @@ ls -l /var/www/html
 sudo nano /var/www/html/index.html
 cat /var/www/html/index.html
 ```
+<img width="954" height="946" alt="2b link" src="https://github.com/user-attachments/assets/00447aec-afd3-4f9d-97e0-9a92d8b6e022" />
+
 ### Budget Monitoring
+<img width="1719" height="951" alt="2b-bills" src="https://github.com/user-attachments/assets/46d6c5d8-228f-48f9-8968-3500306d903e" />
+<img width="1718" height="950" alt="2b-budget" src="https://github.com/user-attachments/assets/9fd3a226-9abc-4b6f-905b-9c1b3af9c000" />
 
 ### Instance Termination
+<img width="891" height="824" alt="2b terminate" src="https://github.com/user-attachments/assets/505c92e4-cebe-4785-87b5-1fb78c4119bd" />
 
 ### Ping International Servers
 ```bash
@@ -160,23 +167,32 @@ ping -c 4 google.com
 ping -c 4 bbc.co.uk
 ping -c 4 nus.edu.sg
 ```
+<img width="892" height="568" alt="2b ping" src="https://github.com/user-attachments/assets/888ea87d-ee71-4a16-aefd-e7bc212450d0" />
 
 
 ### Upload Local File via scp
 ```bash
- scp -i "aws-Ubuntu-key1.pem" C:\Users\User\Desktop test.txt ubuntu@54.87.22.131:/home/ubuntu
+scp -i "C:\Users\User\Downloads\ubuntu.pem" "C:\Users\User\Downloads\test.txt" ubuntu@13.239.143.151:/home/ubuntu
+ls -l /home/ubuntu
 ```
+<img width="635" height="99" alt="2b localub" src="https://github.com/user-attachments/assets/eaa64f9d-0346-48bd-ac95-26812ae889a8" />
+<img width="965" height="208" alt="2b local" src="https://github.com/user-attachments/assets/5b27fef2-15ef-4f5f-b85c-2e31afc10ec7" />
 
 ### Reflection Questions
 What were the benefits of cloud deployment over local virtualisation? 
+Cloud gives a real public IP, so anyone on the internet can reach the server. No need to configure port forwarding, NAT, or router settings like with local VMs.
 
 How does Apache serve files, and how did you verify this? 
+Apache serves files from /var/www/html, returning index.html by default when visiting the root URL. verified by placing files and loading my public ip in the browser
 
 What did you learn about file ownership and permissions? 
+Web root files often need sudo to create or modify, since they're owned by root. Copying files with cp doesn't require chmod, but SSH keys do.
 
 What risks are associated with leaving instances running? 
+Unused running instances gives  potential for unauthorized access or exploitation and ongoing AWS charges accumulate.
 
 How would you explain the difference between DNS and /etc/hosts to a client?
+DNS is the internet's shared address book, used by everyone. /etc/hosts is their own private cheat sheet, just for them.
 
 ## 2b-2 Introduction to Bash Scripting & System Automation
 ### Directory and File Operations
@@ -190,6 +206,7 @@ cp notes.txt backup_notes.txt
 mv backup_notes.txt old_notes.txt
 rm old_notes.txt
 ```
+<img width="875" height="166" alt="2b Directory" src="https://github.com/user-attachments/assets/c781f7c3-c680-47cc-a1f5-ffd5a0d6e53b" />
 
 ### Reflection: File System Commands
 What command did you use to create a directory?
@@ -205,33 +222,62 @@ mv renames file and cv copies file contents.
 The commands I used are
 ```bash
 cd LabFiles
-nano hello_world.sg
+nano hello_world.sh
 chmod 777 hello_world.sh
 ./hello_world.sg
 nano hello_world.sh
 ```
+<img width="891" height="121" alt="2b bash" src="https://github.com/user-attachments/assets/2b938e4a-d282-4f62-ac3d-107468ef1193" />
 
 ### Reflection: Script Basics
 What is chmod +x for? 
+Makes a file executable, so it can be run directly.
 
 Why is #!/bin/bash used? 
+Tells the system which interpreter should run the script.
 
 How can you personalize script output?
+You can personalize script output by editing the echo line
 
 ### Implementing Loop & Conditionals
 ```bash
-cd LabFiles
 nano system_info.sh
 chmod 777 system_info.sh
 ./system_info.sh
 ```
+code in file:
+```bash
+#!/bin/bash
+
+echo "System Information Script"
+echo "Current User: $USER"
+
+for i in 1 2 3 4 5
+do
+    echo "Iteration: $i"
+done
+
+read -p "Enter a number between 1 and 10: " num
+
+if [ "$num" -gt 5 ] && [ "$num" -le 10 ]; then
+    echo "You entered a number greater than 5 but less than or equal to 10."
+elif [ "$num" -ge 1 ] && [ "$num" -le 5 ]; then
+    echo "You entered a number between 1 and 5."
+else
+    echo "You entered a number outside the 1-10 range."
+fi
+```
+<img width="637" height="246" alt="2b loops" src="https://github.com/user-attachments/assets/980e2235-566a-4915-9e82-1109ff85fa11" />
 
 ### Reflection Questions
 How does the for loop work?
+It repeats the block once for each value in the list
 
 What happens if number > 10?
+It falls into the else branch, printing "outside the 1-10 range."
 
 How could invalid input be handled more gracefully?
+Could just check whether the input's actually a number before comparing it.
 
 ### Automating System Monitoring Tasks
 ```bash
@@ -239,10 +285,29 @@ nano resource_monitor.sh
 ch 777 resource_monitor.sh
 ./resource_monitor.sh
 ```
+code in file:
+```bash
+#!/bin/bash
+
+echo "=== System Resource Monitor ==="
+echo ""
+echo "--- Memory Usage ---"
+free -h
+echo ""
+echo "--- Disk Usage ---"
+df -h
+echo ""
+echo "--- CPU Load ---"
+uptime
+```
+<img width="890" height="534" alt="2b resource" src="https://github.com/user-attachments/assets/6abd30d9-b3fd-4ca2-8070-4ca2f9194e24" />
 
 ### Reflection Questions
 What information does the free -h command provide?
+It shows total, used, and available RAM and swap, in human-readable units.
 
 How can you modify the script to monitor network usage?
+Add a command like ifconfig, ip -s link, or netstat -i to the script.
 
 Why is automating system monitoring beneficial for admins?
+It saves time, catches issues early, and ensures consistent checks without manual effort.
