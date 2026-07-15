@@ -384,32 +384,36 @@ sudo chown alice /home/shared
 sudo chgrp sharedgroup /home/shared
 ls -ld /home/shared
 ```
+<img width="817" height="111" alt="1b homeshd" src="https://github.com/user-attachments/assets/405012b1-ce2d-49dc-a265-448d6d5527d2" />
 
 ### Ten Files Created in 'shared' Folder
 Here I will create 10 files inside the "shared" folder
 The commands I used are
 ```bash
-sud touch /home/shared file1.txt
-sud touch /home/shared file2.txt
-sud touch /home/shared file3.txt
-sud touch /home/shared file4.txt
-sud touch /home/shared file5.txt
-sud touch /home/shared file6.txt
-sud touch /home/shared file7.txt
-sud touch /home/shared file8.txt
-sud touch /home/shared file9.txt
-sud touch /home/shared file10.txt
+sudo touch /home/shared file1.txt
+sudo touch /home/shared file2.txt
+sudo touch /home/shared file3.txt
+sudo touch /home/shared file4.txt
+sudo touch /home/shared file5.txt
+sudo touch /home/shared file6.txt
+sudo touch /home/shared file7.txt
+sudo touch /home/shared file8.txt
+sudo touch /home/shared file9.txt
+sudo touch /home/shared file10.txt
 ls -l /home/shared
 ```
+<img width="817" height="244" alt="1b files" src="https://github.com/user-attachments/assets/83f105ed-d8a0-43d6-bcc5-1a4c8771604c" />
 
 ### Permissions Assigned Properly
 Here I will give permission to alice and joe in the shared group
 The commands I used are
 ```bash
-sudo chown alice:sharedgroup /home/shared/file*txt
+sudo touch /home/shared/file{1..10}.txt
+sudo chown alice:sharedgroup /home/shared/file*.txt
 sudo chmod 750 /home/shared/file*txt
 ls -l /home/shared
 ```
+<img width="819" height="546" alt="1b chown" src="https://github.com/user-attachments/assets/a018390d-637c-433d-8913-ced46ab68863" />
 
 ### Access Verified as Each User
 Here I will check the permissions of the users
@@ -424,6 +428,7 @@ echo "test" >> /home/shared/file1.txt
 echo "test" >> /home/shared/file2.txt
 cat /home/shared/file1.txt
 ```
+<img width="821" height="550" alt="1b access" src="https://github.com/user-attachments/assets/a526fa29-989c-474c-8b1a-1e88377c14c6" />
 
 ### Use of chmod/chown/chgrp -R
 Here I will show the usage of recursive flags
@@ -435,6 +440,7 @@ sudo chmod -R 750 /home/shaared
 sudo ls -ld /home/shared
 sudo ls -l /home/shared
 ```
+<img width="649" height="367" alt="1b recursive" src="https://github.com/user-attachments/assets/ae841b39-5e61-45a1-8c89-b63b48ec170a" />
 
 ### Add Dude to Sudo
 Here I will add dude to sudo group
@@ -443,6 +449,7 @@ The commands I used are
 sudo addusers dude sudo
 groups dude
 ```
+<img width="422" height="79" alt="1b adddude" src="https://github.com/user-attachments/assets/dea16dc6-8992-4c85-8a91-7e214853c770" />
 
 ### Dude Sudo Access
 Here I will use dude's new sudo permission to access protected files
@@ -452,6 +459,7 @@ su - dude
 ls -l /home/shared
 sudo ls -l /home/shared
 ```
+<img width="663" height="330" alt="1b dudesudo" src="https://github.com/user-attachments/assets/237a066e-faf7-49d7-bba4-042d414d4df9" />
 
 ### Clean Up Folder
 Here I will delete the shared directory and its contents
@@ -460,28 +468,34 @@ The commands I used are
 sudo rm -r /home/shared
 sudo ls -ld /home/shared
 ```
+<img width="693" height="58" alt="1b cleanup" src="https://github.com/user-attachments/assets/3db75eb2-702b-489d-bd79-24895eba7810" />
 
 ### 1b-2 Reflection Questions
 How do Linux permissions differ from Windows ACL? 
+Linux uses simple owner, group, and others permission bits, while Windows ACLs allow more granular, per user permission rules.
 
 Whats the effect of chmod 770 vs 750?
+Both give owners full access. 770 lets group members write and execute files, while 750 limits groups to read and execute only.
 
 What is the risk of adding users to the sudo group?
+Sudo access lets a user run any command as root, bypassing normal permissions, which is risky if misused or compromised.
 
 Why is it important to verify with 'su' and 'whoami'?
-
+They confirm which user is actually active, ensuring permissions are tested realistically instead of assumed to work correctly.
 
 ## 1b-3 File Search, Analysis & Archiving in Linux
 ### Archieve Extraction
 Here I will extract the archieved guntenberg.tar.bz2. I had to transfer the file from my host machine to VM
 The commands I used are
 ```bash
-scp 1b-3-Gutenberg.tar.bz2 jaden@192.168.138.128L /home/jaden/
-ls -l 1b-3-Gutenberg.tar.bz2
-bunzip2 1b-3-Gutenberg.tar.bz2
-tar -xvf 1b-3-Gutenberg.tar
+scp Gutenberg.tar zxong@192.168.134.128:/home/zxong/
+ls -l Gutenberg.tar.bz2
+bunzip2 Gutenberg.tar.bz2
+tar -xvf Gutenberg.tar
 ls -l
 ```
+<img width="644" height="694" alt="1b Gutenberg" src="https://github.com/user-attachments/assets/3e77ff31-e61d-4f1c-9b26-e3dddc734df6" />
+<img width="498" height="99" alt="1b extract" src="https://github.com/user-attachments/assets/58ae69a8-5070-475e-897d-646a7619c98a" />
 
 ### File Listing of Extracted Directory
 Here I will show you the output of ls -l where Gutenberg was extracted to. 
@@ -489,13 +503,15 @@ The commands I used are
 ```bash
 ls -l
 ```
+<img width="785" height="472" alt="1b locateGuten" src="https://github.com/user-attachments/assets/a4f07348-a105-4e4f-878b-dce1701637af" />
 
 ### Filename Search
 Here I will demonstrate filename search
 The commands I used are
 ```bash
-find ./Gutenberg -name "*.txt"
+find . -name "*.txt"
 ```
+<img width="833" height="194" alt="1b find" src="https://github.com/user-attachments/assets/0fcbbb2e-f882-4fff-9223-31eacf4a417a" />
 
 ### Text Seach via Grep
 Here I will demonstrate a text search using grep
@@ -504,6 +520,7 @@ The commands I used are
 ls -l
 grep -r "verdigris"
 ```
+<img width="820" height="82" alt="1b textsearch" src="https://github.com/user-attachments/assets/32cdfdf8-d6b5-4e2d-923d-64ce4b646240" />
 
 ### Contextual Text Search
 Here I will demonstrate a contextual text search using grep. There was no phrase matching "Next day there was a surprise for Jack". Thus, there was no output given
@@ -511,6 +528,7 @@ The commands I used are
 ```bash
 grep -r -C 3 "Next day there was a surprise for Jack"
 ```
+<img width="818" height="45" alt="1b nooutput" src="https://github.com/user-attachments/assets/5b5e56ac-1fed-4d50-a71b-234336f2d354" />
 
 ### Data Based File Search
 Here I will demonstrate data based file search using find. find . -type f -printf '%T+ %p\n' lists the files, sort sorts the results with oldest being first and sed -n '3p' prints only the 3rd line 
@@ -518,6 +536,7 @@ The command I used are
 ```bash
 find . -type f -printf '%T+ %p\n' | sort | sed -n '3p'
 ```
+<img width="820" height="63" alt="1b databased" src="https://github.com/user-attachments/assets/adecbd00-12c5-4c93-8738-bfa8bc555a8e" />
 
 ### Size Based File Search
 Here I will demonstrate a file search based on size. soze 255258c has no files, thus, there is no output
@@ -526,13 +545,15 @@ The commands I used are
 find . -type f -size 255258c -exec ls -lh {} \;
 find . -type f -size +512k -exec ls -lh {} \;
 ```
+<img width="819" height="627" alt="1b sizeba" src="https://github.com/user-attachments/assets/06acb2f6-0524-4fba-9b9c-ce8b67fe37c7" />
 
 ### Find Largest File
 Here I will demonstrate the Largest File found
 The command line I used are 
 ```bash
-du -a ./Gutenberg | sort -nr | head
+du -a . | sort -nr | head
 ```
+<img width="820" height="226" alt="1b largest" src="https://github.com/user-attachments/assets/45abec19-1380-46da-8765-61dc3ec18c11" />
 
 ### Text Frequency Analysis Performed
 Here I will demonstrate text frequency analysis
@@ -540,6 +561,7 @@ The command i used are
 ```bash
 sed -e 's/\s/\n/g' < test.txt | sort | uniq -c | sort -nr | head -200
 ```
+<img width="821" height="100" alt="1b text frequency" src="https://github.com/user-attachments/assets/7cdec179-157a-4a56-84d8-c35425fbbb73" />
 
 ### Answers to Questions Provided
 How many times does the string “verdigris” appear? (enter a number only) 
@@ -555,12 +577,14 @@ NIL
 
 ### 1b-3 Reflection Questions
 Which command-line tool was the most useful in solving the questions?  
+find was most useful, since it let me search by name, date, and size, covering most of the question types directly.
 
 How might these search tools help in cybersecurity investigations? 
-
+They help investigators quickly locate suspicious files, timestamps, or specific text patterns across large systems without manually checking each file. 
 
 How could scripting improve repetitive search tasks? 
+Scripting automates repeated searches, saving time and reducing manual errors compared to retyping similar commands individually each time.
 
 What limitations did you encounter using grep and find? 
-
+Both tools returned no output when searches failed silently, making it hard to tell if a query worked correctly.
  
