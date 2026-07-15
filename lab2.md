@@ -101,3 +101,137 @@ At what point (in years/pages) do the two printer options break even in cost?
 They will not break even. The Canon stays cheaper throughout, as the laser's higher electricity cost outweighs its lower purchase price.
 
 ## 2b-1 Cloud Web Server Deployment
+### EC2 Instance Launched
+
+### Security Group Configured
+
+### SSH Access Successful
+
+### Apache Installed and Tested
+```bash
+sudo apt install apache2
+```
+
+### Custom index.html
+```bash
+sudo nano /var/www/html/index.html
+cat /var/www/html/index.html
+```
+
+### External File Downloaded with wget
+```bash
+cd /home/ubuntu
+pwd
+wget http://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf
+ls -lh EECS-2009-28.pdf
+```
+### Copying of file to web root
+```bash
+cd /home/ubuntu
+sudo cp EECS-2009-28.pdf var/www/html
+ls -l /var/www/html
+```
+
+### PDF File Accesible via browser
+
+### Link Inserted in HTML Page
+```bash
+sudo nano /var/www/html/index.html
+cat /var/www/html/index.html
+```
+### Budget Monitoring
+
+### Instance Termination
+
+### Ping International Servers
+```bash
+ping -c 4 google.com
+ping -c 4 bbc.co.uk
+ping -c 4 nus.edu.sg
+```
+
+
+### Upload Local File via scp
+```bash
+ scp -i "aws-Ubuntu-key1.pem" C:\Users\User\Desktop test.txt ubuntu@54.87.22.131:/home/ubuntu
+```
+
+### Reflection Questions
+What were the benefits of cloud deployment over local virtualisation? 
+
+How does Apache serve files, and how did you verify this? 
+
+What did you learn about file ownership and permissions? 
+
+What risks are associated with leaving instances running? 
+
+How would you explain the difference between DNS and /etc/hosts to a client?
+
+## 2b-2 Introduction to Bash Scripting & System Automation
+### Directory and File Operations
+```bash
+mkdir LabFiles
+cd LabFiles
+touch notes.txt
+echo "This is a Bash scripting lab." > notes.txt
+cat notes.txt
+cp notes.txt backup_notes.txt
+mv backup_notes.txt old_notes.txt
+rm old_notes.txt
+```
+
+### Reflection: File System Commands
+What command did you use to create a directory?
+used mkdir to create a directory.
+
+How can you view file content without a GUI editor?
+use cat command to view without editor.
+
+What is the difference between cp and mv?
+mv renames file and cv copies file contents.
+
+### Basic Bash Script Created and Run
+The commands I used are
+```bash
+cd LabFiles
+nano hello_world.sg
+chmod 777 hello_world.sh
+./hello_world.sg
+nano hello_world.sh
+```
+
+### Reflection: Script Basics
+What is chmod +x for? 
+
+Why is #!/bin/bash used? 
+
+How can you personalize script output?
+
+### Implementing Loop & Conditionals
+```bash
+cd LabFiles
+nano system_info.sh
+chmod 777 system_info.sh
+./system_info.sh
+```
+
+### Reflection Questions
+How does the for loop work?
+
+What happens if number > 10?
+
+How could invalid input be handled more gracefully?
+
+### Automating System Monitoring Tasks
+```bash
+nano resource_monitor.sh
+ch 777 resource_monitor.sh
+./resource_monitor.sh
+```
+
+### Reflection Questions
+What information does the free -h command provide?
+
+How can you modify the script to monitor network usage?
+
+Why is automating system monitoring beneficial for admins?
