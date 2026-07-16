@@ -280,11 +280,13 @@ ls -la
 Here I will SSH into my vm and create a file on its desktop from my host machine
 The commands I used are
 ```bash
+ssh zxong@192.168.134.128
 cd ~/Desktop
 touch zxong
 ls -la Desktop
 ```
-<img width="815" height="691" alt="1b extension" src="https://github.com/user-attachments/assets/4f260403-d9e4-4f9b-8942-a5e650412f63" />
+<img width="972" height="504" alt="1b sshhosttovm" src="https://github.com/user-attachments/assets/c1a9dffd-cc3b-49a6-ac67-7117bcf716b5" />
+
 
 ### Extension Challenge 2 Completed
 Here I will attempt to launch gedit over SSH. I am unable to launch gedit over SSH as is a GUI text editor and SSH only allows for command line access. 
