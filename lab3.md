@@ -366,3 +366,8 @@ sudo systemctl restart smbd
 sudo systemctl enable smbd
 smbclient -L localhost -N
 ```
+<img width="890" height="233" alt="3b installsamba" src="https://github.com/user-attachments/assets/727245b1-1d0a-4f4c-b31c-2b24044646da" />
+<img width="1852" height="833" alt="3b sambaconf" src="https://github.com/user-attachments/assets/6e02cbfe-8205-4806-b561-8a4df3fcc178" />
+<img width="914" height="58" alt="3b sambacon" src="https://github.com/user-attachments/assets/e4a8db4a-205e-415d-8c26-74834cc3182a" />
+<img width="1171" height="237" alt="3b sambafinal" src="https://github.com/user-attachments/assets/7bea1567-8534-4ab0-8810-1183fe88e2e0" />
+
