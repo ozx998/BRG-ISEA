@@ -133,6 +133,17 @@ less /proc/cpuinfo
 <img width="892" height="851" alt="1a less bus" src="https://github.com/user-attachments/assets/e3ca85e1-d4b9-4857-a3e4-c1a836900b89" />
 <img width="850" height="635" alt="1a command output" src="https://github.com/user-attachments/assets/07b9e1cd-e407-4210-9b88-d39a0229e75c" />
 
+### Output Redirection
+Here I will save a command line output into a file, view it and delete it all using just the terminal
+The commands I used are
+```bash
+command lsusb > output_of_lsusb
+ls -lah
+less output_of_lsusb
+rm output_of_lsusb
+```
+<img width="889" height="597" alt="1a lessoutput" src="https://github.com/user-attachments/assets/eca9eb28-0e71-4078-9f87-a44fad478278" />
+<img width="891" height="552" alt="1a output redirec" src="https://github.com/user-attachments/assets/bcb09c39-1d99-4358-b46f-fda0f0863fee" />
 
 ### Software Installed
 3 ways of using softwares in Ubuntu. Through the browser, through binary download, and through a repository install
@@ -167,9 +178,8 @@ gcc hello_world.c -o hello_world_executable
 ls -lah
 ./hello_world_executable
 ```
-<img width="890" height="346" alt="1a gcc" src="https://github.com/user-attachments/assets/709e4486-a82f-4577-96c1-c7486627a71f" />
-<img width="890" height="682" alt="1a helloexe" src="https://github.com/user-attachments/assets/fbaa312a-835a-4777-a3a3-05b1ad206c19" />
-<img width="891" height="835" alt="1a hello" src="https://github.com/user-attachments/assets/21e6827f-41c5-4f25-bd5d-8650d52a9a9b" />
+<img width="820" height="691" alt="1a HelloCode" src="https://github.com/user-attachments/assets/ec589d55-5ed8-49e6-96e0-2194ef17783a" />
+<img width="818" height="693" alt="1a Hello" src="https://github.com/user-attachments/assets/a887abbe-216d-4d1a-b707-beb2a00f96bf" />
 
 
 ### Reflection Summary 1a-2
