@@ -9,83 +9,100 @@
 sudo systemctl status apache2
 sudo ss -tulnp | grep :80
 ```
+<img width="892" height="75" alt="3a grep" src="https://github.com/user-attachments/assets/b54a0be6-2749-4101-99a4-45af4009ce6e" />
+<img width="891" height="347" alt="3a apcherunning" src="https://github.com/user-attachments/assets/d17dfbcc-56c2-4a08-aee4-ba2c304fd34e" />
 
 ### Public IP to Domain mapping verified
-
 ```bash
 nslookup zhengxuanweb.duckdns.org
 dig zhengxuanweb.duckdns.org
 ```
-
-### Screenshot: Apache Welcome Page via Domain
-Apache Welcome Page via Domain name
+<img width="1651" height="881" alt="3a-1 duckweb" src="https://github.com/user-attachments/assets/e01dbb3d-8678-4ae3-b9dc-9113e8ab9031" />
 
 ### Screenshot: DNS Test Output
 ```bash
-nslookup jadenwebapp.duckdns.org
-dig jadenwebapp.duckdns.org
+nslookup zhengxuanweb.duckdns.org
+dig zhengxuanweb.duckdns.org
 ```
+<img width="888" height="549" alt="3a nslookup" src="https://github.com/user-attachments/assets/45dc0469-f8bd-4ada-9015-e553976eb1ab" />
 
 ## Activity 2
 ### Certbot installed
-
+<img width="645" height="132" alt="3a certbot" src="https://github.com/user-attachments/assets/2ebe1640-96f8-49fd-90f2-ae5c9c33fc2a" />
+<img width="1257" height="419" alt="3a valid cert" src="https://github.com/user-attachments/assets/e403d131-0fed-4224-9df8-47841d362238" />
 
 ### HTTPS Enabled on Domain 
-
+<img width="952" height="940" alt="3a https enabled" src="https://github.com/user-attachments/assets/268bdec9-bf0a-4382-85cb-6d9e3c85b93d" />
 
 ### Valid TLS Certificate 
-
+<img width="1854" height="882" alt="3a TLS" src="https://github.com/user-attachments/assets/3cc320c1-0d86-4f64-b0b5-75c1cd333f0f" />
 
 ### Screenshot: HTTPS with Lock Icon 
-
+<img width="893" height="362" alt="3a lockicon" src="https://github.com/user-attachments/assets/c92a61dd-3026-4f3a-b221-c153c97ab7d3" />
 
 ### Screenshot: Certbot Success Message 
 ```bash
 sudo certbot --apache
 ```
+<img width="890" height="218" alt="3a certsuccess" src="https://github.com/user-attachments/assets/295a36a3-8c31-44e4-beea-11651e623a44" />
 
 ### Screenshot: Renewal Dry-Run Output 
 ```bash
 sudo certbot renew --dry-run
 ```
+<img width="883" height="168" alt="3a dryrun" src="https://github.com/user-attachments/assets/d5cf3d12-51dd-48ec-87ff-e6025cb23fed" />
 
 ### 3a-1 Reflection questions
 What is the role of DNS in Internet presence? 
+DNS maps human-readable domain names to server IP addresses, letting visitors actually reach their website.
 
 Why does DNS propagation take time?
+Changes must spread across cached records on servers worldwide, and caches only refresh after their TTL expires.
 
 How does Let’s Encrypt validate domain ownership?
+It asks their server to prove control, usually by serving a specific file or DNS record temporarily.
 
 What are the risks if TLS is not configured on a public-facing site?
+Data travels unencrypted, exposing passwords, sessions, and browsers may flag the site as untrusted or insecure.
 
 What could happen if you leave your cloud VM running for months?
+It accumulates ongoing charges, and the extended uptime increases exposure to unpatched vulnerabilities and attacks.
 
 ## 3ba-2 Enabling HTTPS with Let's Encrypt & Certbot
 ### Pre-Condition Verified: Domain Points to Server
+<img width="1651" height="881" alt="3a-1 duckweb" src="https://github.com/user-attachments/assets/642e177d-6c20-4a36-9ac3-f59e7acf91e7" />
+<img width="1249" height="769" alt="3a- duck ips" src="https://github.com/user-attachments/assets/a9b087c3-f56e-42c1-8d00-5798b75a2513" />
 
 ### Certbot Installed via Snap 
+<img width="892" height="92" alt="3a snapbot" src="https://github.com/user-attachments/assets/4ca45ffd-2496-49a2-94cd-f2a31ccdc2b9" />
 
 ### HTTPS Enabled on Apache
+<img width="1718" height="961" alt="3a-2 digital cert" src="https://github.com/user-attachments/assets/a2f5e063-e906-48e7-a2b8-09f83b2ecc46" />
 
 ### Browser Lock Icon (Secure Connection) 
+<img width="893" height="362" alt="3a lockicon" src="https://github.com/user-attachments/assets/f917818f-7759-467e-8ba2-7c8f4e14a918" />
 
 ### View Certificate Issuer
+<img width="1854" height="882" alt="3a TLS" src="https://github.com/user-attachments/assets/ed126469-1ba8-4f06-bb39-bbbaf0e638e3" />
 
 ### Certbot Auto-Renewal Dry Run Successful
+<img width="883" height="168" alt="3a dryrun" src="https://github.com/user-attachments/assets/538482e1-2193-4110-a2fb-c5a824c23a4d" />
 
 ### 3b-2 Reflection Questions
 Why is HTTPS important for modern web applications? 
+It encrypts data in transit, protecting logins and sensitive info from interception or tampering.
 
 What entity issued your site’s TLS certificate? 
-
+Let's Encrypt, a free, automated certificate authority, issued the certificate for your domain.
 
 How long is your certificate valid for, and how can it be renewed? 
-
+It's valid 90 days, and renews automatically via Certbot's scheduled background task.
 
 What happens if a certificate expires and is not renewed? 
-
+Browsers show security warnings, block access, and users lose trust in your site.
 
 Why does Let’s Encrypt require port 80 or 443 to be open for verification? 
+It confirms you actually control the domain by serving a challenge file publicly.
 
 ## 3b-1 Bash Backup Scripting, Cron Jobs & Cloud Export
 ### Practice Bash Commands Executed 
