@@ -261,21 +261,24 @@ Full contents of script provided, with:
 ```bash
 cat /usr/bin/testscript
 ```
+<img width="892" height="721" alt="3b script2run" src="https://github.com/user-attachments/assets/31e40d1e-33e6-4b71-8467-04293ec9649a" />
+<img width="892" height="877" alt="3b script2" src="https://github.com/user-attachments/assets/94499106-5786-40d1-8005-77ec3ddff73d" />
 
 ### 3b-1 Reflection Questions
 Why is using absolute paths important in scripts run by cron? 
-
+Cron runs with minimal environment variables, so relative paths fail without the full context.
 
 What are the benefits of cloud exporting for backups? 
-
+Offsite copies survive local disasters, hardware failure, or if the original server gets destroyed.
 
 How does cron differ from manual execution? 
-
+Cron runs automatically on schedule without supervision, while manual execution requires them present, triggering it.
 
 What happens if SSH keys are not accepted ahead of time? 
- 
+ Cron jobs hang or fail silently, since there's no interactive prompt to confirm host authenticity.
 
 How can login messages help improve user/system engagement? 
+They can display reminders, system status, or security notices right when a user connects.
 
 ## 3b-2 Additional Server Services
 ### System Preperation
@@ -287,6 +290,8 @@ sudo apt update --fix-missing
 sudo apt upgrade -y
 sudo apt install -y curl wget gnupg lsb-release ca-certificates
 ```
+<img width="1208" height="808" alt="3b update2" src="https://github.com/user-attachments/assets/5019317d-2d6f-4b8f-abbd-6182e0cefa89" />
+<img width="1338" height="684" alt="3b update1" src="https://github.com/user-attachments/assets/adf9a9a6-9357-4f65-8b5b-8d745f7ff62f" />
 
 ### Installing MariaDB
 First I install MariaDB, start and enable MariaDB, and perform a secure MariaDB installation, then verify MariaDB. When I used sudo mysql-secure-installation, it said command not found. Turns out, the command was sudo mariadb-secure-installation instead. 
@@ -299,6 +304,9 @@ sudo mysql -u root -p
 SHOW DATABASES;
 EXIT;
 ```
+<img width="1584" height="799" alt="3b maria1" src="https://github.com/user-attachments/assets/95a8ec18-e151-432e-b20e-c03108e120b9" />
+<img width="1852" height="837" alt="3b maria2" src="https://github.com/user-attachments/assets/9be4270d-f4fc-480e-a6d5-f48f8422a8b1" />
+
 
 ### Installing NTP Server
 Here I install NTP Server for time synchronisation. No troubles encountered.
@@ -311,6 +319,9 @@ sudo systemctl enable chrony
 chronyc sources
 timedatectl
 ```
+<img width="1572" height="637" alt="3b ntp2" src="https://github.com/user-attachments/assets/91d09443-e406-4319-bf80-d9ac238b1c20" />
+<img width="1853" height="885" alt="3b ntp" src="https://github.com/user-attachments/assets/fea19047-34c0-44bc-8ffd-4be7e8669fe1" />
+
 
 ### DHCP Server
 Here I will install DHCP Server and assign the ip
@@ -322,6 +333,10 @@ sudo systemctl restart isc-dhcp-server
 sudo systemctl enable isc-dhcp-server
 systemctl status isc-dhcp-server
 ```
+<img width="1329" height="650" alt="3b dhcp1" src="https://github.com/user-attachments/assets/9684fc08-0eaf-4a05-a7af-bfca6a41e384" />
+<img width="1852" height="837" alt="3b dhcp2" src="https://github.com/user-attachments/assets/cee47358-becb-4d47-b9e2-87a89d409956" />
+<img width="1852" height="829" alt="3b dhcp3" src="https://github.com/user-attachments/assets/f01ba75c-ede2-4328-be17-835e9c138c03" />
+<img width="1328" height="815" alt="3b dhcp4" src="https://github.com/user-attachments/assets/37b5aaf1-8516-45a2-84dd-ff833ba12a73" />
 
 ### Installing NFS Server
 Here I will install NFS Server, created shared directory, and configure NFS export
@@ -336,6 +351,9 @@ sudo systemctl restart nfs-kernel-server
 sudo systemctl enable nfs-kernel-server
 showmount -e localhost
 ```
+<img width="889" height="160" alt="3b installnfs" src="https://github.com/user-attachments/assets/710166ec-c35e-4acf-99ca-043ff7d07d2f" />
+<img width="1851" height="828" alt="3b nfs1" src="https://github.com/user-attachments/assets/efdda1c5-e187-462f-ba62-5fa0b22b83ee" />
+<img width="890" height="358" alt="3b nfs2" src="https://github.com/user-attachments/assets/605ffea7-f8fd-4295-a0c9-1de3f34d809f" />
 
 ### Installing Samba
 Here I will install Samba, create shared folder, configure samba share, and verify. When I tried to run smbclient -L localhost -N, it said I had to install. So i ran sudo apt install smbclient command to install it, then I had no other errors.
