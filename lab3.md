@@ -86,7 +86,8 @@ It accumulates ongoing charges, and the extended uptime increases exposure to un
 <img width="1854" height="882" alt="3a TLS" src="https://github.com/user-attachments/assets/ed126469-1ba8-4f06-bb39-bbbaf0e638e3" />
 
 ### Certbot Auto-Renewal Dry Run Successful
-<img width="883" height="168" alt="3a dryrun" src="https://github.com/user-attachments/assets/538482e1-2193-4110-a2fb-c5a824c23a4d" />
+<img width="883" height="168" alt="3b dryrun" src="https://github.com/user-attachments/assets/9be30033-47ba-4ee2-8dd1-adf4ad6ec385" />
+
 
 ### 3b-2 Reflection Questions
 Why is HTTPS important for modern web applications? 
@@ -135,6 +136,7 @@ done
 
 echo "Final total is $total"
 ```
+<img width="1851" height="563" alt="3b pracbash" src="https://github.com/user-attachments/assets/64b7a0d3-26d0-411e-9fb7-e6f00f1ad3fa" />
 
 ### Test Files & Directories Created 
 Commands used
@@ -148,6 +150,7 @@ echo "This is another test file" > /home/ubuntu/Documents/folder2/file4.txt
 
 ls -R /home/ubuntu/Documents
 ```
+<img width="889" height="301" alt="3b dircreate" src="https://github.com/user-attachments/assets/791d8484-481a-4b87-9c88-be1ef44847fc" />
 
 ### Basic Script Working (testscript) 
 File /home/ubuntu/testscript created and tested with: 
@@ -161,6 +164,8 @@ chmod 777 /home/ubuntu/testscript
 ls -l /home/ubuntu/testscript
 ls -R /home/ubuntu/backup
 ```
+<img width="890" height="360" alt="3b basicScript" src="https://github.com/user-attachments/assets/54d17d65-8ac6-4e29-9369-0eafcdd123fc" />
+<img width="1852" height="451" alt="3b runbasicScript" src="https://github.com/user-attachments/assets/a93a38d0-2847-48d8-afc2-92ba428a12f2" />
 
 ### Script Moved to /usr/bin and Tested 
 Output showing: 
@@ -175,10 +180,12 @@ sudo chmod 777 /usr/bin/testscript
 
 ls -l /usr/bin/testscript
 
-cd / testscript
+cd /
+testscript
 pwd
 ls -R /home/ubuntu/backup
 ```
+<img width="1853" height="526" alt="3b scriptmove" src="https://github.com/user-attachments/assets/fe5feb15-fa43-43c4-902a-a4abc8ac6962" />
 
 ### ZIP Archive with Date Filename 
 Script updated to: 
@@ -191,8 +198,13 @@ sudo apt update
 sudo apt install zip -y
 sudo nano /usr/bin/testscript
 testscript
+
 ls -lh /home/ubuntu/*.zip
 ```
+<img width="1851" height="802" alt="3b zipdown" src="https://github.com/user-attachments/assets/10b06672-4bd6-4840-9e32-0c1dae24d51f" />
+<img width="1849" height="569" alt="3b zipfile" src="https://github.com/user-attachments/assets/d3989bb7-1fb4-48b6-a11c-3f4847bd75dd" />
+<img width="1852" height="368" alt="3b ziprun" src="https://github.com/user-attachments/assets/0f003b24-c7a9-4069-8ce9-e723dc9517d4" />
+<img width="1412" height="419" alt="3b zipend" src="https://github.com/user-attachments/assets/dd6ef315-2e71-412c-b4da-a6c6b6cc79bf" />
 
 ### Cronjob Set Up for Hourly Backup 
 Screenshot or output of /etc/crontab edited to include: 
@@ -203,11 +215,15 @@ sudo nano /etc/crontab
 sudo systemctl status cron
 tail -n 10 /etc/crontab
 ```
+<img width="1852" height="733" alt="3b statscron" src="https://github.com/user-attachments/assets/02162b4f-ef8b-426e-82bb-38deec83a28c" />
+<img width="1853" height="607" alt="3b cronjob" src="https://github.com/user-attachments/assets/e99a64e0-2a61-4ed7-aeb7-49d5ad0433a0" />
+<img width="918" height="215" alt="3b tailcron" src="https://github.com/user-attachments/assets/681bfa43-9928-4bf4-bc18-59e592ac6415" />
 
 ### Successful Cron Execution Verified 
 Evidence that the script runs every hour: 
 • ZIP file created hourly 
 • Timestamps or ls -lh output confirming multiple backups created 
+<img width="627" height="58" alt="3b evidence" src="https://github.com/user-attachments/assets/73bcded1-f021-405d-ab0f-6b5991ecb73a" />
 
 
 ### SCP to Cloud Working 
@@ -217,20 +233,25 @@ scp -i key.pem $now.zip ubuntu@<server>:~/
 Commands used
 ```bash
 cd C:\Users\User\Desktop
-scp -i "ubuntu.pem" ubuntu@13.239.143.151:/home/ubuntu/*.zip .
+scp -i "C:\Users\User\Downloads\ubuntu.pem" ubuntu@13.239.143.151:/home/ubuntu/16_07_26.zip .
 dir *.zip
 scp -i "ubuntu.pem" "11_07_26.zip" ubuntu@13.239.143.151:/home/ubuntu/
 ls -lh /home/ubuntu/*.zip
 ```
+<img width="892" height="53" alt="3b scphere" src="https://github.com/user-attachments/assets/28784f9e-ac84-40b4-9dcb-8cec5bd9cc7f" />
+<img width="925" height="215" alt="3b scptocloud" src="https://github.com/user-attachments/assets/8b4058ba-8f49-41c0-ac80-ece88ca96a24" />
 
 ### SSH Certificate Accepted by Root 
 Output of sudo ssh -i key.pem ... showing manual acceptance of SSH key fingerprint 
 Commands used
 ```bash
+cd C:\Users\User\Downloads
 scp -i "ubuntu.pem" "ubuntu.pem" ubuntu@13.239.143.151:/home/ubuntu/ubuntu.pem
 chmod 400 /home/ubuntu/ubuntu.pem
-sudo ssh -i /home/ubuntu/key.pem ubuntu@13.239.143.151
-```
+ssh -i /home/ubuntu/ubuntu.pem ubuntu@13.239.143.151
+``` 
+<img width="1359" height="669" alt="3b manualaccept" src="https://github.com/user-attachments/assets/aed0b03b-8dce-47d2-a465-792cef9c3fef" />
+<img width="936" height="140" alt="3b copypem" src="https://github.com/user-attachments/assets/bd249f6e-6a36-4e0f-9934-55b194cfcd52" />
 
 ### Final Script Submitted 
 Full contents of script provided, with: 
